@@ -3,7 +3,7 @@
 import telebot
 import google.generativeai as genai
 
-genai.configure(api_key="YOUR_API_KEY")
+genai.configure(api_key="AIzaSyAl9GwPb6uL3ds5XcfpCAPomQGw-0qGECw")
 model = genai.GenerativeModel("gemini-1.5-flash")
 response = model.generate_content("Explain how AI works")
 print(response.text)
