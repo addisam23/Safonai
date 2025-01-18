@@ -1,13 +1,19 @@
 #Author: Arman Idrisi
 
 import telebot
-import openai
+import google.generativeai as genai
+
+genai.configure(api_key="YOUR_API_KEY")
+model = genai.GenerativeModel("gemini-1.5-flash")
+response = model.generate_content("Explain how AI works")
+print(response.text)
+
 
 
 #Bot Api Token
 API_TOKEN = ''
-#Openai Api Key
-openai.api_key=""
+
+
 
 
 bot = telebot.TeleBot(API_TOKEN)
