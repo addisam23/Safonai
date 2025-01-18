@@ -18,17 +18,6 @@ API_TOKEN = '7597773357:AAGOUlb2EfugOAOK-2SFMqYc0JLiGWUgZrI'
 
 bot = telebot.TeleBot(API_TOKEN)
 
-#Generate The Response
-def get_response(msg):
-	completion = openai.Completion.create(
-    engine="text-davinci-003",
-    prompt=msg,
-    max_tokens=1024,
-    n=1,
-    stop=None,
-    temperature=0.5,
-)
-	return completion.choices[0].text
 
 # Handle '/start' and '/help'
 @bot.message_handler(commands=['help', 'start'])
